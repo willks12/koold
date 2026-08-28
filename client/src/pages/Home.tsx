@@ -125,7 +125,8 @@ function SectionKicker({ children }: { children: React.ReactNode }) {
   );
 }
 
-const LEAD_EMAIL = "Kooldmarketing1@gmail.com";
+// +55 35 98403-7479 no formato exigido pelo wa.me: so digitos, com DDI
+const LEAD_WHATSAPP = "5535984037479";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -144,16 +145,16 @@ export default function Home() {
   const submitLead = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const subject = `Contato pelo site — ${data.get("name")}`;
-    const body = [
-      `Nome: ${data.get("name")}`,
+    const text = [
+      `Olá, Koold! Sou ${data.get("name")}.`,
+      "",
       `E-mail: ${data.get("email")}`,
       "",
-      "Sobre a empresa:",
+      "Sobre minha empresa:",
       `${data.get("message")}`,
     ].join("\n");
-    window.location.href = `mailto:${LEAD_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    toast.success("Abrimos seu aplicativo de e-mail com a mensagem pronta. Confira e clique em enviar.");
+    window.open(`https://wa.me/${LEAD_WHATSAPP}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    toast.success("Abrimos o WhatsApp da Koold com sua mensagem pronta. Confira e clique em enviar.");
   };
 
   return (
@@ -482,7 +483,7 @@ export default function Home() {
                 <textarea required name="message" rows={3} placeholder="Conte rapidamente o que você quer alcançar." />
               </label>
               <button type="submit" className="cta-primary">Quero falar com um especialista <ArrowDownRight size={17} /></button>
-              <p className="form-caption">Ao enviar, abrimos seu aplicativo de e-mail com a mensagem pronta.</p>
+              <p className="form-caption">Ao enviar, abrimos o WhatsApp da Koold com sua mensagem pronta.</p>
             </form>
           </div>
         </section>
