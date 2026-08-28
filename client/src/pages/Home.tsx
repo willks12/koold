@@ -77,10 +77,6 @@ const faqItems = [
   },
 ];
 
-function scrollToContact() {
-  document.querySelector("#contato")?.scrollIntoView({ behavior: "smooth" });
-}
-
 function SnowField() {
   const flakes = useMemo(
     () =>
@@ -177,9 +173,9 @@ export default function Home() {
           ))}
         </nav>
 
-        <button className="header-cta" onClick={scrollToContact}>
+        <a className="header-cta" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
           Falar com a Koold <ArrowUpRightIcon />
-        </button>
+        </a>
 
         <button
           className="menu-button"
@@ -197,7 +193,7 @@ export default function Home() {
                 {item.label}
               </a>
             ))}
-            <button onClick={() => { closeMenu(); scrollToContact(); }}>Falar com a Koold</button>
+            <a className="mobile-menu-cta" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Falar com a Koold</a>
           </div>
         )}
       </header>
@@ -219,9 +215,9 @@ export default function Home() {
               Estratégia, mídia e presença digital para empresas que querem ser encontradas, gerar oportunidades e crescer com direção.
             </p>
             <div className="hero-actions">
-              <button className="cta-primary" onClick={scrollToContact}>
+              <a className="cta-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
                 Quero colocar minha empresa em movimento <ArrowDownRight size={18} />
-              </button>
+              </a>
               <a className="text-link" href="#metodo">
                 Conhecer o método <ArrowRight size={16} />
               </a>
@@ -397,7 +393,7 @@ export default function Home() {
                   ].map((item) => <li key={item}><Check size={15} />{item}</li>)}
                 </ul>
                 <p className="plan-note">O investimento destinado às plataformas de anúncios não está incluído.</p>
-                <button className="cta-outline plan-button" onClick={scrollToContact}>Conhecer este plano <ArrowRight size={16} /></button>
+                <a className="cta-outline plan-button" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Conhecer este plano <ArrowRight size={16} /></a>
               </article>
               <article className="plan-card plan-card--featured">
                 <div className="plan-topline"><span>Presença + Performance</span><Snowflake size={18} /></div>
@@ -414,7 +410,7 @@ export default function Home() {
                   ].map((item) => <li key={item}><Check size={15} />{item}</li>)}
                 </ul>
                 <p className="plan-note">Consulte condições dos planos e serviços disponíveis.</p>
-                <button className="cta-primary plan-button" onClick={scrollToContact}>Conhecer o plano completo <ArrowDownRight size={16} /></button>
+                <a className="cta-primary plan-button" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Conhecer o plano completo <ArrowDownRight size={16} /></a>
               </article>
             </div>
           </div>

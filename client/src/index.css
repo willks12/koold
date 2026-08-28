@@ -295,7 +295,7 @@ blockquote { max-width: 660px; margin: 0; padding-left: 27px; border-left: 2px s
   .menu-button { display: grid; place-items: center; }
   .mobile-menu { position: absolute; top: 62px; left: 22px; right: 22px; display: grid; gap: 0; padding: 12px 18px; background: rgba(4, 12, 16, 0.96); border: 1px solid rgba(177, 236, 250, 0.22); backdrop-filter: blur(16px); }
   .mobile-menu a, .mobile-menu button { padding: 15px 2px; color: #d8edf2; background: transparent; border: 0; border-bottom: 1px solid rgba(215, 247, 255, 0.12); text-align: left; font-size: 12px; letter-spacing: 0.11em; text-transform: uppercase; }
-  .mobile-menu button { border-bottom: 0; color: var(--cyan-bright); }
+  .mobile-menu .mobile-menu-cta { border-bottom: 0; color: var(--cyan-bright); }
   .split-title, .experience-content, .problem-grid, .manifesto-layout, .faq-layout, .contact-layout, .ideal-layout { grid-template-columns: 1fr; }
   .split-title, .experience-content, .manifesto-layout, .ideal-layout, .faq-layout, .contact-layout { gap: 34px; }
   .experience-content { margin-top: 55px; }
