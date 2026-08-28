@@ -17,12 +17,12 @@ import {
 import { toast } from "sonner";
 
 const assets = {
-  logo: "/images/koold-logo-2026-clean_dfe7c409.png",
-  hero: "/images/koold-hero-ice-network_93756006.jpg",
-  performance: "/images/koold-performance-visual_3aaf166b.jpg",
-  googleBusiness: "/images/koold-google-business_3ea18e9a.jpg",
-  strategy: "/images/koold-strategy_7b3c9307.jpg",
-  content: "/images/koold-content-studio_99366863.jpg",
+  logo: `${import.meta.env.BASE_URL}images/koold-logo-2026-clean_dfe7c409.png`,
+  hero: `${import.meta.env.BASE_URL}images/koold-hero-ice-network_93756006.jpg`,
+  performance: `${import.meta.env.BASE_URL}images/koold-performance-visual_3aaf166b.jpg`,
+  googleBusiness: `${import.meta.env.BASE_URL}images/koold-google-business_3ea18e9a.jpg`,
+  strategy: `${import.meta.env.BASE_URL}images/koold-strategy_7b3c9307.jpg`,
+  content: `${import.meta.env.BASE_URL}images/koold-content-studio_99366863.jpg`,
 };
 
 const navItems = [
@@ -33,11 +33,11 @@ const navItems = [
 ];
 
 const countries = [
-  { label: "Brasil", src: "/images/brazil_d4838f47.jpeg" },
-  { label: "Estados Unidos", src: "/images/united-states_f336a8d9.jpeg" },
-  { label: "Portugal", src: "/images/portugal_b7752c14.jpeg" },
-  { label: "Espanha", src: "/images/spain_a92b5531.jpeg" },
-  { label: "Inglaterra", src: "/images/england_86ead45f.jpeg" },
+  { label: "Brasil", src: `${import.meta.env.BASE_URL}images/brazil_d4838f47.jpeg` },
+  { label: "Estados Unidos", src: `${import.meta.env.BASE_URL}images/united-states_f336a8d9.jpeg` },
+  { label: "Portugal", src: `${import.meta.env.BASE_URL}images/portugal_b7752c14.jpeg` },
+  { label: "Espanha", src: `${import.meta.env.BASE_URL}images/spain_a92b5531.jpeg` },
+  { label: "Inglaterra", src: `${import.meta.env.BASE_URL}images/england_86ead45f.jpeg` },
 ];
 
 const faqItems = [
