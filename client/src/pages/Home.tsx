@@ -14,7 +14,6 @@ import {
   Snowflake,
   X,
 } from "lucide-react";
-import { toast } from "sonner";
 
 const assets = {
   logo: `${import.meta.env.BASE_URL}images/koold-logo-2026-clean_dfe7c409.png`,
@@ -127,6 +126,9 @@ function SectionKicker({ children }: { children: React.ReactNode }) {
 
 // +55 35 98403-7479 no formato exigido pelo wa.me: so digitos, com DDI
 const LEAD_WHATSAPP = "5535984037479";
+const WHATSAPP_URL = `https://wa.me/${LEAD_WHATSAPP}?text=${encodeURIComponent(
+  "Olá! Vim pelo site da Koold e gostaria de saber mais sobre o trabalho de vocês.",
+)}`;
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -141,21 +143,6 @@ export default function Home() {
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
-
-  const submitLead = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const text = [
-      `Olá, Koold! Sou ${data.get("name")}.`,
-      "",
-      `E-mail: ${data.get("email")}`,
-      "",
-      "Sobre minha empresa:",
-      `${data.get("message")}`,
-    ].join("\n");
-    window.open(`https://wa.me/${LEAD_WHATSAPP}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
-    toast.success("Abrimos o WhatsApp da Koold com sua mensagem pronta. Confira e clique em enviar.");
-  };
 
   return (
     <div className="koold-site">
@@ -469,22 +456,12 @@ export default function Home() {
               <p className="contact-question">Essa pessoa vai encontrar você ou seu concorrente?</p>
               <p>Comece a construir uma presença digital estratégica com quem carrega a experiência de mais de 160 negócios gerenciados em cinco países.</p>
             </div>
-            <form className="contact-form" onSubmit={submitLead}>
-              <label>
-                Seu nome
-                <input required name="name" placeholder="Como podemos chamar você?" />
-              </label>
-              <label>
-                E-mail profissional
-                <input required type="email" name="email" placeholder="voce@empresa.com" />
-              </label>
-              <label>
-                Sobre sua empresa
-                <textarea required name="message" rows={3} placeholder="Conte rapidamente o que você quer alcançar." />
-              </label>
-              <button type="submit" className="cta-primary">Quero falar com um especialista <ArrowDownRight size={17} /></button>
-              <p className="form-caption">Ao enviar, abrimos o WhatsApp da Koold com sua mensagem pronta.</p>
-            </form>
+            <div className="contact-form">
+              <a className="cta-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                Falar no WhatsApp <ArrowDownRight size={17} />
+              </a>
+              <p className="form-caption">Conversa direta com a equipe da Koold, sem formulário.</p>
+            </div>
           </div>
         </section>
       </main>
