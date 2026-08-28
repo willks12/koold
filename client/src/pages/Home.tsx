@@ -125,6 +125,8 @@ function SectionKicker({ children }: { children: React.ReactNode }) {
   );
 }
 
+const LEAD_EMAIL = "Kooldmarketing1@gmail.com";
+
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -141,8 +143,17 @@ export default function Home() {
 
   const submitLead = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    toast.success("Recebemos seu interesse. Em breve, a equipe da Koold entrará em contato.");
-    event.currentTarget.reset();
+    const data = new FormData(event.currentTarget);
+    const subject = `Contato pelo site — ${data.get("name")}`;
+    const body = [
+      `Nome: ${data.get("name")}`,
+      `E-mail: ${data.get("email")}`,
+      "",
+      "Sobre a empresa:",
+      `${data.get("message")}`,
+    ].join("\n");
+    window.location.href = `mailto:${LEAD_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    toast.success("Abrimos seu aplicativo de e-mail com a mensagem pronta. Confira e clique em enviar.");
   };
 
   return (
@@ -471,7 +482,7 @@ export default function Home() {
                 <textarea required name="message" rows={3} placeholder="Conte rapidamente o que você quer alcançar." />
               </label>
               <button type="submit" className="cta-primary">Quero falar com um especialista <ArrowDownRight size={17} /></button>
-              <p className="form-caption">Ao enviar, você inicia uma conversa estratégica com a Koold.</p>
+              <p className="form-caption">Ao enviar, abrimos seu aplicativo de e-mail com a mensagem pronta.</p>
             </form>
           </div>
         </section>
