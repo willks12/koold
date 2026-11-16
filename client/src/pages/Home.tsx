@@ -468,15 +468,15 @@ export default function Home() {
           <div className="layout-shell contact-layout">
             <div className="contact-copy">
               <SectionKicker>Próximo passo</SectionKicker>
-              <h2>Tem alguém procurando o que você vende <span>agora.</span></h2>
-              <p className="contact-question">Essa pessoa vai encontrar você ou seu concorrente?</p>
-              <p>Comece a construir uma presença digital estratégica para sua empresa no Brasil ou na China.</p>
+              <h2>Vamos construir a presença digital da sua <span>empresa?</span></h2>
+              <p className="contact-question">Conte o que você precisa. A Koold apresenta o caminho mais adequado.</p>
+              <p>Sites, Google Meu Negócio, tráfego pago e estratégia para ajudar sua empresa a ser encontrada e gerar novas oportunidades.</p>
             </div>
             <div className="contact-form">
               <a className="cta-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-                Falar no WhatsApp <ArrowDownRight size={17} />
+                Solicitar proposta <ArrowDownRight size={17} />
               </a>
-              <p className="form-caption">Conversa direta com a equipe da Koold, sem formulário.</p>
+              <p className="form-caption">Clique para conversar diretamente com a equipe da Koold no WhatsApp.</p>
             </div>
           </div>
         </section>
