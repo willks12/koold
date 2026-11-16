@@ -209,7 +209,7 @@ export default function Home() {
               Precisa da estrutura <strong>certa.</strong>
             </h1>
             <p className="hero-lead">
-              Estratégia, mídia e presença digital para empresas que querem ser encontradas, gerar oportunidades e crescer com direção.
+              Sites, Google Meu Negócio, tráfego pago e estratégia para empresas que querem ser encontradas, comunicar melhor e crescer com direção.
             </p>
             <div className="hero-actions">
               <a className="cta-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
@@ -229,16 +229,16 @@ export default function Home() {
         <section className="experience-section" id="metodo">
           <div className="layout-shell">
             <div className="split-title">
-              <SectionKicker>Experiência construída na prática</SectionKicker>
+              <SectionKicker>Estrutura para crescer</SectionKicker>
               <h2>
-                Estratégias digitais para mais de <span>160 negócios.</span>
+                Sua empresa precisa de uma presença digital <span>bem estruturada.</span>
               </h2>
             </div>
             <div className="experience-content">
-              <div className="experience-number">160<span>+</span></div>
+              <div className="experience-number experience-number--word">Koold<span>.</span></div>
               <div>
                 <p className="body-large">
-                  Nossa experiência vem da gestão de estratégias digitais em diferentes mercados, segmentos e estágios de negócio.
+                  Organizamos os pontos que fazem sua empresa ser encontrada, entendida e lembrada: site, presença no Google, campanhas e estratégia.
                 </p>
                 <div className="country-row" aria-label="Países atendidos">
                   {countries.map((country) => (
@@ -319,6 +319,7 @@ export default function Home() {
                 <div className="image-solution-copy">
                   <span className="solution-index">02</span>
                   <h3>Tráfego<br />Pago</h3>
+                  <p>Criamos e acompanhamos campanhas para colocar sua empresa diante das pessoas certas, com estratégia e controle.</p>
                 </div>
               </article>
               <article className="solution-item solution-item--image">
@@ -469,7 +470,7 @@ export default function Home() {
               <SectionKicker>Próximo passo</SectionKicker>
               <h2>Tem alguém procurando o que você vende <span>agora.</span></h2>
               <p className="contact-question">Essa pessoa vai encontrar você ou seu concorrente?</p>
-              <p>Comece a construir uma presença digital estratégica com uma empresa que reúne experiência em negócios no Brasil e na China.</p>
+              <p>Comece a construir uma presença digital estratégica para sua empresa no Brasil ou na China.</p>
             </div>
             <div className="contact-form">
               <a className="cta-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">

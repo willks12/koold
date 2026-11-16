@@ -152,6 +152,7 @@ h2 span { color: var(--cyan-bright); font-weight: 500; }
 .experience-content { display: grid; grid-template-columns: 0.65fr 1.35fr; gap: 48px; margin-top: 90px; }
 .experience-number { font-family: "Manrope", sans-serif; font-size: clamp(6rem, 12vw, 12rem); line-height: 0.75; font-weight: 200; letter-spacing: -0.1em; color: #d8f6ff; }
 .experience-number span { color: var(--cyan-bright); }
+.experience-number--word { font-size: clamp(4.8rem, 9vw, 9rem); letter-spacing: -0.09em; }
 .body-large { max-width: 610px; color: #b5c7cd; font-size: 22px; line-height: 1.55; font-weight: 300; }
 .country-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 38px 0 44px; }
 .country-row .country-flag { display: block; width: 34px; height: 22px; overflow: hidden; border: 1px solid rgba(223, 249, 255, 0.25); box-shadow: 0 0 10px rgba(0, 194, 255, 0.12); }
