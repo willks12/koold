@@ -38,14 +38,14 @@ const countries = [
 
 const faqItems = [
   {
-    question: "Preciso investir nos anúncios além do valor do plano?",
+    question: "Preciso investir nos anúncios além do valor da gestão?",
     answer:
-      "Sim. O investimento destinado às plataformas de anúncios é separado do valor referente aos serviços da Koold. Nossa equipe orientará sobre o investimento recomendado de acordo com o negócio e a estratégia.",
+      "Sim. O investimento destinado às plataformas de anúncios é separado do valor dos serviços da Koold. Nossa equipe orientará sobre o investimento recomendado de acordo com o negócio e a estratégia.",
   },
   {
     question: "Vocês cuidam do Google Meu Negócio?",
     answer:
-      "Sim. A gestão e a otimização da presença da empresa no Google fazem parte do plano indicado.",
+      "Sim. A gestão e a otimização da presença da empresa no Google fazem parte do serviço contratado.",
   },
   {
     question: "Preciso ter fotos e vídeos?",
@@ -60,12 +60,12 @@ const faqItems = [
   {
     question: "Existe contrato?",
     answer:
-      "Trabalhamos com diferentes planos e períodos de contratação. Nossa equipe apresentará as opções e condições comerciais durante o atendimento.",
+      "Trabalhamos com diferentes formatos e períodos de contratação. Nossa equipe apresentará as opções e condições comerciais durante o atendimento.",
   },
   {
     question: "Vocês atendem empresas de qualquer lugar?",
     answer:
-      "Sim. Nossa experiência inclui negócios no Brasil e no exterior. A viabilidade da estratégia será analisada de acordo com o segmento e o objetivo da empresa.",
+      "Sim. Podemos atender empresas no Brasil e no exterior. A viabilidade da estratégia será analisada de acordo com o segmento e o objetivo da empresa.",
   },
   {
     question: "Em quanto tempo vou ter resultados?",
@@ -117,7 +117,7 @@ function SectionKicker({ children }: { children: React.ReactNode }) {
   );
 }
 
-// +55 35 98403-7479 no formato exigido pelo wa.me: so digitos, com DDI
+// +55 35 98403-7479 no formato exigido pelo wa.me: só dígitos, com DDI
 const LEAD_WHATSAPP = "5535984037479";
 const WHATSAPP_URL = `https://wa.me/${LEAD_WHATSAPP}?text=${encodeURIComponent(
   "Olá! Vim pelo site da Koold e gostaria de saber mais sobre o trabalho de vocês.",
@@ -238,7 +238,7 @@ export default function Home() {
               <div className="experience-number experience-number--word">Koold<span>.</span></div>
               <div>
                 <p className="body-large">
-                  Organizamos os pontos que fazem sua empresa ser encontrada, entendida e lembrada: site, presença no Google, campanhas e estratégia.
+                  Organizamos os pontos que fazem sua empresa ser encontrada, entendida e lembrada: um site, presença no Google, campanhas e estratégia.
                 </p>
                 <div className="country-row" aria-label="Países atendidos">
                   {countries.map((country) => (
@@ -285,7 +285,7 @@ export default function Home() {
             </div>
             <div className="manifesto-main">
               <h2>Marketing profissional, sem estruturas desnecessárias.</h2>
-              <p>A Koold é uma empresa de presença digital que combina estratégia, criação e performance para tornar o crescimento mais acessível.</p>
+              <p>A Koold organiza a estratégia, a criação e a performance para tornar o crescimento digital mais acessível.</p>
               <div className="manifesto-points">
                 <span>Ser encontrada.</span>
                 <span>Ser vista.</span>
@@ -380,7 +380,7 @@ export default function Home() {
             <div className="plans-intro">
               <SectionKicker>Estrutura de trabalho</SectionKicker>
               <h2>Comece pelo essencial. <span>Escale com direção.</span></h2>
-              <p>Cada projeto é entendido de acordo com o momento, o objetivo e a estrutura da sua empresa. Fale com a equipe para receber uma proposta.</p>
+              <p>Cada projeto é planejado de acordo com o momento, o objetivo e a estrutura da sua empresa. Fale com a equipe para receber uma proposta.</p>
             </div>
             <div className="plans-grid">
               <article className="plan-card">
