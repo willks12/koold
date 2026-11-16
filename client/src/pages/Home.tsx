@@ -27,16 +27,13 @@ const assets = {
 const navItems = [
   { label: "Método", href: "#metodo" },
   { label: "Soluções", href: "#solucoes" },
-  { label: "Planos", href: "#planos" },
+  { label: "Estrutura", href: "#planos" },
   { label: "FAQ", href: "#faq" },
 ];
 
 const countries = [
   { label: "Brasil", src: `${import.meta.env.BASE_URL}images/brazil_d4838f47.jpeg` },
-  { label: "Estados Unidos", src: `${import.meta.env.BASE_URL}images/united-states_f336a8d9.jpeg` },
-  { label: "Portugal", src: `${import.meta.env.BASE_URL}images/portugal_b7752c14.jpeg` },
-  { label: "Espanha", src: `${import.meta.env.BASE_URL}images/spain_a92b5531.jpeg` },
-  { label: "Inglaterra", src: `${import.meta.env.BASE_URL}images/england_86ead45f.jpeg` },
+  { label: "China", src: `${import.meta.env.BASE_URL}images/china-flag.svg` },
 ];
 
 const faqItems = [
@@ -288,7 +285,7 @@ export default function Home() {
             </div>
             <div className="manifesto-main">
               <h2>Marketing profissional, sem estruturas desnecessárias.</h2>
-              <p>A Koold nasceu para tornar estratégias profissionais de aquisição de clientes mais acessíveis.</p>
+              <p>A Koold é uma empresa de presença digital que combina estratégia, criação e performance para tornar o crescimento mais acessível.</p>
               <div className="manifesto-points">
                 <span>Ser encontrada.</span>
                 <span>Ser vista.</span>
@@ -304,9 +301,9 @@ export default function Home() {
             <div className="section-heading-row">
               <div>
                 <SectionKicker>O que fazemos</SectionKicker>
-                <h2>Presença que gera <span>oportunidades.</span></h2>
+                <h2>Estrutura digital que gera <span>oportunidades.</span></h2>
               </div>
-              <p>Estratégia integrada para sua empresa aparecer, comunicar e converter com clareza.</p>
+              <p>Sites, estratégia e mídia para sua empresa aparecer, comunicar e converter com clareza.</p>
             </div>
             <div className="solutions-rail">
               <article className="solution-item solution-item--image">
@@ -332,6 +329,14 @@ export default function Home() {
                   <p>Orientamos ofertas, comunicação e materiais para desenvolver campanhas mais coerentes com o seu momento.</p>
                 </div>
               </article>
+              <article className="solution-item solution-item--image">
+                <img src={assets.content} alt="Tela de um projeto digital em atmosfera fria e cinematográfica" />
+                <div className="image-solution-copy">
+                  <span className="solution-index">04</span>
+                  <h3>Criação<br />de sites</h3>
+                  <p>Sites profissionais, responsivos e pensados para apresentar sua empresa e transformar visitas em conversas.</p>
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -339,10 +344,10 @@ export default function Home() {
         <section className="service-showcase service-showcase--content">
           <div className="showcase-image"><img src={assets.content} alt="Estúdio criativo em atmosfera fria e cinematográfica" /></div>
           <div className="showcase-copy">
-            <SectionKicker>Presença + Performance</SectionKicker>
-            <h2>Conteúdo constrói <span>presença.</span> Anúncios criam movimento.</h2>
-            <p>Para marcas que precisam manter uma comunicação profissional e constante nas redes sociais, conectamos conteúdo, direção e campanhas em uma única estratégia.</p>
-            <a href="#planos" className="text-link">Ver estrutura completa <ArrowRight size={16} /></a>
+            <SectionKicker>Sites profissionais</SectionKicker>
+            <h2>Sua empresa merece uma presença digital à <span>altura.</span></h2>
+            <p>Criamos sites modernos e responsivos para explicar o que sua empresa faz, transmitir confiança e facilitar o contato com novos clientes.</p>
+            <a href={WHATSAPP_URL} className="text-link" target="_blank" rel="noopener noreferrer">Solicitar proposta <ArrowRight size={16} /></a>
           </div>
         </section>
 
@@ -372,15 +377,14 @@ export default function Home() {
         <section className="plans-section" id="planos">
           <div className="layout-shell">
             <div className="plans-intro">
-              <SectionKicker>Planos</SectionKicker>
+              <SectionKicker>Estrutura de trabalho</SectionKicker>
               <h2>Comece pelo essencial. <span>Escale com direção.</span></h2>
-              <p>Escolha uma estrutura que faça sentido para o momento da sua empresa.</p>
+              <p>Cada projeto é entendido de acordo com o momento, o objetivo e a estrutura da sua empresa. Fale com a equipe para receber uma proposta.</p>
             </div>
             <div className="plans-grid">
               <article className="plan-card">
                 <div className="plan-topline"><span>Koold Performance</span><Snowflake size={18} /></div>
-                <p className="plan-price">A partir de <strong>R$ 297</strong><small>/mês</small></p>
-                <p className="plan-description">Para colocar sua empresa diante de potenciais clientes com estratégia e consistência.</p>
+                <p className="plan-description plan-description--lead">Para colocar sua empresa diante de potenciais clientes com estratégia e consistência.</p>
                 <ul>
                   {[
                     "Gestão de tráfego pago",
@@ -392,25 +396,24 @@ export default function Home() {
                     "Acompanhamento da operação",
                   ].map((item) => <li key={item}><Check size={15} />{item}</li>)}
                 </ul>
-                <p className="plan-note">O investimento destinado às plataformas de anúncios não está incluído.</p>
-                <a className="cta-outline plan-button" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Conhecer este plano <ArrowRight size={16} /></a>
+                <p className="plan-note">O investimento destinado às plataformas de anúncios é definido separadamente, de acordo com a estratégia.</p>
+                <a className="cta-outline plan-button" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Solicitar proposta <ArrowRight size={16} /></a>
               </article>
               <article className="plan-card plan-card--featured">
-                <div className="plan-topline"><span>Presença + Performance</span><Snowflake size={18} /></div>
-                <p className="plan-price">A partir de <strong>R$ 597</strong><small>/mês</small></p>
-                <p className="plan-description">Para empresas que precisam de anúncios e de uma presença profissional constante nas redes sociais.</p>
-                <div className="plan-include">Tudo o que está incluso no Koold Performance, mais:</div>
+                <div className="plan-topline"><span>Sites profissionais</span><Snowflake size={18} /></div>
+                <p className="plan-description plan-description--lead">Para empresas que precisam apresentar seu trabalho com mais clareza, confiança e profissionalismo.</p>
+                <div className="plan-include">Uma estrutura digital pensada para o seu objetivo:</div>
                 <ul>
                   {[
-                    "Gestão das redes sociais",
-                    "Dois conteúdos semanais",
-                    "Planejamento de conteúdo",
-                    "Criação das peças planejadas",
-                    "Estratégia integrada entre conteúdo e anúncios",
+                    "Layout moderno e responsivo",
+                    "Estrutura de páginas e conteúdo",
+                    "Botões de contato e WhatsApp",
+                    "Direção visual alinhada à sua marca",
+                    "Publicação e orientação para continuidade",
                   ].map((item) => <li key={item}><Check size={15} />{item}</li>)}
                 </ul>
-                <p className="plan-note">Consulte condições dos planos e serviços disponíveis.</p>
-                <a className="cta-primary plan-button" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Conhecer o plano completo <ArrowDownRight size={16} /></a>
+                <p className="plan-note">O investimento varia conforme o número de páginas, conteúdo e funcionalidades do projeto.</p>
+                <a className="cta-primary plan-button" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">Solicitar proposta <ArrowDownRight size={16} /></a>
               </article>
             </div>
           </div>
@@ -466,7 +469,7 @@ export default function Home() {
               <SectionKicker>Próximo passo</SectionKicker>
               <h2>Tem alguém procurando o que você vende <span>agora.</span></h2>
               <p className="contact-question">Essa pessoa vai encontrar você ou seu concorrente?</p>
-              <p>Comece a construir uma presença digital estratégica com quem carrega a experiência de mais de 160 negócios gerenciados em cinco países.</p>
+              <p>Comece a construir uma presença digital estratégica com uma empresa que reúne experiência em negócios no Brasil e na China.</p>
             </div>
             <div className="contact-form">
               <a className="cta-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
@@ -483,7 +486,7 @@ export default function Home() {
           <a className="brand-lockup brand-lockup--footer" href="#inicio" aria-label="Koold Marketing — início">
             <img className="brand-logo brand-logo--2026" src={assets.logo} alt="Koold Marketing" />
           </a>
-          <p>Marketing essencial para empresas que querem crescer.</p>
+          <p>Estratégia, sites e presença digital para empresas que querem crescer.</p>
           <a href="#inicio" className="back-top">Voltar ao início <MoveUpRight size={15} /></a>
         </div>
       </footer>
